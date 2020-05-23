@@ -1,8 +1,8 @@
 //
-//  File.swift
+//  
 //  
 //
-//  Created by Darko Dujmovic on 19/02/2020.
+//  Created by Darko Dujmovic
 //
 
 import Foundation
@@ -106,6 +106,7 @@ public class WorkdayManager{
                     self.pauseOrEndWorkday()
                     completion(.success(Void()))
                 case .failure:
+                    completion(.failure(StateChangeError.stateChangeError))
                 }
             }
 
@@ -118,6 +119,7 @@ public class WorkdayManager{
                     self.pauseOrEndWorkday()
                     completion(.success(Void()))
                 case .failure:
+                    completion(.failure(StateChangeError.stateChangeError))
                 }
             }
 
